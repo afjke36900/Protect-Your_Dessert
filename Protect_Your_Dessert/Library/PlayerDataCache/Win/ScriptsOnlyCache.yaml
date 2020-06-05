@@ -52,9 +52,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12934}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -85,19 +85,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 12110}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12934}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,19 +136,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 12110}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12934}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -187,33 +187,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11278}
     - Class: 114
       Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11312}
     - Class: 114
-      Script: {instanceID: 11642}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11918}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 12110}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 28398}
+      Script: {instanceID: 12964}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -267,6 +267,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: aff8b8f12f1fb0fb345004b26df5ba7a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameSet
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -527,6 +533,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: c143bbe317e6fc214cb5bf8424f8fdd3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameControl
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -657,22 +669,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c143bbe317e6fc214cb5bf8424f8fdd3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameControl
-  - hash:
-      serializedVersion: 2
-      Hash: aff8b8f12f1fb0fb345004b26df5ba7a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameSet
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Level.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Set.unity
-  playerPath: "C:/Users/409-01/Desktop/\u65B0\u589E\u8CC7\u6599\u593E/Protect_Your_Dessert.exe"
+  playerPath: "C:/Users/409-01/Desktop/\u57F7\u884C\u6A94\u6E2C\u8A66/Protect_Your_Dessert.exe"
