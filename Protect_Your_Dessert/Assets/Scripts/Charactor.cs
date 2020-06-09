@@ -3,7 +3,7 @@
 public class Charactor : MonoBehaviour
 {
     [Header("移動速度"), Range(1, 200)]
-    public float speed = 10;
+    public float speed = 15;
 
     private Vector3 direction;
     private Rigidbody rig;
