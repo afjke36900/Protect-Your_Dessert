@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class Charactor : MonoBehaviour
 {
     [Header("移動速度"), Range(1, 200)]
-    public float speed = 15;
+    public float speed = 20;
 
     private Vector3 direction;
     private Rigidbody rig;
@@ -35,6 +37,28 @@ public class Charactor : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 碰到物體後，物體消失、玩家加速
+    /// </summary>
+    /// <param name="prop"></param>
+    private void HitProp(GameObject prop)
+    {
+        if (prop.tag == "PropTest")
+        {
+            speed = 60;
+            Destroy(prop);
+            Invoke("speeddown", 3.0f);
+        }
+       
+    }
+
+
+    private void speeddown()
+    {
+
+        speed = 20;
+    }
+
     private void Start()
     {
         //GetComponent<泛型>() 泛型方法 泛型 所有類型 Rigidbody,Transform,Collider
@@ -47,5 +71,11 @@ public class Charactor : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //碰到道具時觸發HITPROP
+        HitProp(other.gameObject);
     }
 }
