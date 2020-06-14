@@ -5,12 +5,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager GM;
 
-    public KeyCode jump { set; get; }
-    public KeyCode forward { set; get; }
-    public KeyCode left { set; get; }
-    public KeyCode backward { set; get; }
-    public KeyCode right { set; get; }
-    
+    public KeyCode jump { get; set; }
+    public KeyCode forward { get; set; }
+    public KeyCode left { get; set; }
+    public KeyCode backward { get; set; }
+    public KeyCode right { get; set; }
+
     private void Awake()
     {
         if (GM == null)

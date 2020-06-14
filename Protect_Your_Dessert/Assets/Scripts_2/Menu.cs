@@ -18,9 +18,9 @@ public class Menu : MonoBehaviour {
         menuPanel.gameObject.SetActive(false);
         waitingForKey = false;
         
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < menuPanel.childCount; i++)
         {
-            if (menuPanel.GetChild(i).name == "Downkey")
+            if (menuPanel.GetChild(i).name == "Forwardkey")
                 menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameManager.GM.forward.ToString();
             else if (menuPanel.GetChild(i).name == "Backwardkey")
                 menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameManager.GM.backward.ToString();
