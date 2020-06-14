@@ -16,7 +16,7 @@ public class Prop : MonoBehaviour
         for (int i = 0; i < total; i++)
         {
             //座標 = (隨機,1.5,隨機)
-            Vector3 pos = new Vector3(Random.Range(-20, 20), 1.2f, Random.Range(-20, 20));
+            Vector3 pos = new Vector3(Random.Range(-45, 45), 1.2f, Random.Range(-45, 45));
             //生成(物件,座標,角度)
             Instantiate(prop, pos, Quaternion.Euler(90, 0, 0));
         }
@@ -26,7 +26,7 @@ public class Prop : MonoBehaviour
 
     private void Start()
     {
-        CreateProp(props[0], 20);
+        CreateProp(props[0], 40);
     }
 
 

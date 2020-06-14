@@ -45,9 +45,10 @@ public class Charactor : MonoBehaviour
     {
         if (prop.tag == "PropTest")
         {
-            speed = 60;
+            CancelInvoke("speeddown");
+            speed = 30;
             Destroy(prop);
-            Invoke("speeddown", 3.0f);
+            Invoke("speeddown", 3.5f);
         }
        
     }
