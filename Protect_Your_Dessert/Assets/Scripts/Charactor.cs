@@ -9,7 +9,7 @@ public class Charactor : MonoBehaviour
 
     private Vector3 direction;
     private Rigidbody rig;
-
+ 
     private void Move()
     {
 
@@ -20,6 +20,7 @@ public class Charactor : MonoBehaviour
         //剛體, 添加推力(x,y,z) - 世界座標
         //rig.AddForce(0, 0, speed*v);
         //剛體.添加推力(三維向量) - 區域座標
+     
         /*前方 transform.forward - z
           右方 transform.right   - x
           上方 transform.up      - y */
@@ -34,8 +35,11 @@ public class Charactor : MonoBehaviour
         if (h == -1) direction = new Vector3(0, 270, 0);
 
         transform.eulerAngles = direction;
-
+        
     }
+
+
+
 
     /// <summary>
     /// 碰到物體後，物體消失、玩家加速
@@ -68,12 +72,12 @@ public class Charactor : MonoBehaviour
 
 
     }
-
+    
     private void FixedUpdate()
     {
         Move();
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         //碰到道具時觸發HITPROP

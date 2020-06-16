@@ -8,7 +8,7 @@ public class PlayerCamera : MonoBehaviour
     /// </summary>
     private Transform player;
     [Header("追蹤速度"), Range(0.1f, 50.5f)]
-    public float speed = 8f;
+    public float speed = 20f;
 
 
     /// <summary>
