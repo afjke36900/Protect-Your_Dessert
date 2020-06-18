@@ -20,6 +20,14 @@ public class ChangeMaterial_1 : MonoBehaviour
         {
             rend.sharedMaterial = material[1];
         }
+        else if (col.gameObject.tag == "Monster")
+        {
+            rend.sharedMaterial = material[2];
+        }
+        else
+        {
+           // rend.sharedMaterial = material[1];
+        }
 
     }
 }

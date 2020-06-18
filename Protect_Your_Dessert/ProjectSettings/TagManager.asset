@@ -9,6 +9,7 @@ TagManager:
   - SpeedProp
   - BulletProp
   - PropTest
+  - Monster
   layers:
   - Default
   - TransparentFX
