@@ -1,15 +1,41 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager GM;
+    #region 遊戲時間與倒數
+    [Header("倒數時間")]
+    public Text textTime; //畫面上呈現的倒數時間
+    private float gameTime = 10; //遊戲秒數
+    #endregion
+
+    #region 結束畫面
+    [Header("結束畫面標題")]
+    public Text textTitle;
+    [Header("結束畫面")]
+    public CanvasGroup final;
+    #endregion
 
     public KeyCode jump { get; set; }
     public KeyCode forward { get; set; }
     public KeyCode left { get; set; }
     public KeyCode backward { get; set; }
     public KeyCode right { get; set; }
+
+    private void CountTime()  //倒數時間方法
+    {
+        gameTime -= Time.deltaTime;
+
+        //遊戲時間 = 數學.夾住(遊戲時間,最小值,最大值) <--不知道幹嘛用的
+        gameTime = Mathf.Clamp(gameTime, 0, 100);
+
+        textTime.text = "倒數時間:" + gameTime.ToString("f0");
+
+        GameOver();
+
+    }
 
     private void Awake()
     {
@@ -28,5 +54,23 @@ public class GameManager : MonoBehaviour
         left = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("leftKey", "A"));
         backward = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("backwardKey", "S"));
         right = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("rightKey", "D"));
+    }
+
+    private void GameOver() //遊戲結束方法
+    {
+        if (gameTime == 0)
+        {
+            //顯示結束畫面，啟動互動、啟動遮擋 (初始alpha設定=0)
+            final.alpha = 1;
+            final.interactable = true;
+            final.blocksRaycasts = true;
+            textTitle.text = "Game Over";
+            FindObjectOfType<Controller>().enabled = false;
+        }
+    }
+
+    private void Update()
+    {
+        CountTime();
     }
 }
