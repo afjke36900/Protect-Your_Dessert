@@ -7,7 +7,7 @@ public class Title_MilkyWay : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up *0.5f* speed * Time.deltaTime, Space.World);
-        transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.right *0.7f* speed * Time.deltaTime, Space.World);
     }
 }
 
