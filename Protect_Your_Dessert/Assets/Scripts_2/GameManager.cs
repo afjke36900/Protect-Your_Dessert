@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
             final.blocksRaycasts = true;
             textTitle.text = "Game Over";
             FindObjectOfType<Controller>().enabled = false;
+            FindObjectOfType<Shooting>().enabled = false;
         }
     }
 

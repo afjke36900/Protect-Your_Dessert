@@ -37,9 +37,20 @@ public class Menu : MonoBehaviour {
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !menuPanel.gameObject.activeSelf)
+        {
             menuPanel.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            FindObjectOfType<Controller>().enabled = false;
+            FindObjectOfType<Shooting>().enabled = false;
+
+        }
         else if (Input.GetKeyDown(KeyCode.Escape) && menuPanel.gameObject.activeSelf)
+        {
             menuPanel.gameObject.SetActive(false);
+            Time.timeScale = 1;
+            FindObjectOfType<Controller>().enabled = true;
+            FindObjectOfType<Shooting>().enabled = true;
+        }
     }
 
     void OnGUI()
