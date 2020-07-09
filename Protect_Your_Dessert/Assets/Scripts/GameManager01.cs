@@ -37,7 +37,10 @@ public class GameManager01 : MonoBehaviour
         SceneManager.LoadScene("GameControl");
     }
 
-
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
     // 離開遊戲
     public void Quit()

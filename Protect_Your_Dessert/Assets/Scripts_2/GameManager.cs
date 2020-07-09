@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager GM;
+    public GameObject pause;
     #region 遊戲時間與倒數
     [Header("倒數時間")]
     public Text textTime; //畫面上呈現的倒數時間
     private float gameTime = 10; //遊戲秒數
     #endregion
+
 
     #region 結束畫面
     [Header("結束畫面標題")]
@@ -68,6 +70,35 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<Controller>().enabled = false;
             FindObjectOfType<Shooting>().enabled = false;
         }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pause.SetActive(true);
+        FindObjectOfType<Controller>().enabled = false;
+        FindObjectOfType<Shooting>().enabled = false;
+    }
+
+    public void ReturnGame()
+    {
+        Time.timeScale = 1;
+        pause.SetActive(false);
+        FindObjectOfType<Controller>().enabled = true;
+        FindObjectOfType<Shooting>().enabled = true;
+    }
+
+    // 返回首頁
+    public void Menu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Menu");
+        FindObjectOfType<GameManager>().enabled = false;
+    }
+
+    public void ChooseLevel()
+    {
+        SceneManager.LoadScene("Level");
     }
 
     private void Update()

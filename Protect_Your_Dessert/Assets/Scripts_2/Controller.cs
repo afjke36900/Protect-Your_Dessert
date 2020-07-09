@@ -11,7 +11,6 @@ public class Controller : MonoBehaviour
     public bool Canmove;
 
     public Shooting bullet;
-    public GameObject pause;
 
     private void Move()
     {
@@ -81,26 +80,5 @@ public class Controller : MonoBehaviour
         HitProp(other.gameObject);
     }
 
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-        pause.SetActive(true);
-        FindObjectOfType<Controller>().enabled = false;
-        FindObjectOfType<Shooting>().enabled = false;
-    }
 
-    public void ReturnGame()
-    {
-        Time.timeScale = 1;
-        pause.SetActive(false);
-        FindObjectOfType<Controller>().enabled = true;
-        FindObjectOfType<Shooting>().enabled = true;
-    }
-
-    // 返回首頁
-    public void Menu()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Menu");
-    }
 }
