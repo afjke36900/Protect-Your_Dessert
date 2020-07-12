@@ -10,6 +10,7 @@ TagManager:
   - BulletProp
   - PropTest
   - Monster
+  - BGM1
   layers:
   - Default
   - TransparentFX

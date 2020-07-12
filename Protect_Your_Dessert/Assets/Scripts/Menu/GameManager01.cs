@@ -16,6 +16,7 @@ public class GameManager01 : MonoBehaviour
     public void ContinueGame()
     {
         SceneManager.LoadScene("Player Control Test");
+        Destroy(GameObject.FindGameObjectWithTag("BGM1"));
     }
 
     // 重新遊戲
@@ -23,6 +24,7 @@ public class GameManager01 : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Player Control Test");
+        Destroy(GameObject.FindGameObjectWithTag("BGM1"));
     }
 
     // 設定
@@ -40,6 +42,7 @@ public class GameManager01 : MonoBehaviour
     public void Menu()
     {
         SceneManager.LoadScene("Menu");
+        Destroy(GameObject.FindGameObjectWithTag("BGM1"));
     }
 
     // 離開遊戲
