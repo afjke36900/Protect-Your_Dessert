@@ -12,6 +12,12 @@ public class GameManager01 : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 
+    public void StartGame()
+    {
+        SceneManager.LoadScene("StartStory");
+        Destroy(GameObject.FindGameObjectWithTag("BGM1"));
+    }
+
     // 繼續遊戲
     public void ContinueGame()
     {
