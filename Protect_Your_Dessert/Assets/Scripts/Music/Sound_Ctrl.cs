@@ -18,8 +18,8 @@ public class Sound_Ctrl : MonoBehaviour
     private void Start()
     {
         SoundButton();
-        SoundSlider.value = SaveData.SaveAudioSlider;
-        AudioListener.volume = SoundSlider.value;
+        SoundSlider.value = 0.5f;
+        AudioListener.volume = SoundSlider.value;        
     }
 
     private void Update()
@@ -40,8 +40,7 @@ public class Sound_Ctrl : MonoBehaviour
         {
             AudioListener.pause = true;
             SoundButtonImage.sprite = CloseImage;
-        }
-        SaveData.SaveAudioSlider = SoundSlider.value;
+        }        
     }
 
     public void ChangeAudioSlider()
