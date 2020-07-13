@@ -268,7 +268,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   loopType: 1
-  loops: 42
+  loops: 252
   id: 
   isRelative: 0
   isFrom: 0
@@ -4836,7 +4836,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   loopType: 1
-  loops: 42
+  loops: 252
   id: 
   isRelative: 0
   isFrom: 0
@@ -5156,7 +5156,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   loopType: 1
-  loops: 42
+  loops: 252
   id: 
   isRelative: 0
   isFrom: 1
