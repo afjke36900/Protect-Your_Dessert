@@ -9,8 +9,10 @@ ScriptsOnlyBuild:
     - Floor
     - GameManager
     - GameManager01
+    - GameSet
     - GameSystem
     - Menu
+    - Monster
     - MonsterSystem
     - PlayerCamera
     - Prop
@@ -27,8 +29,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -70,19 +74,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11380}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11484}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11936}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12252}
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
@@ -135,25 +139,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11194}
+    - Class: 114
+      Script: {instanceID: 11342}
+    - Class: 114
+      Script: {instanceID: 11378}
     - Class: 114
       Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11936}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12046}
+      Script: {instanceID: 12252}
     - Class: 114
-      Script: {instanceID: 12254}
-    - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12372}
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
@@ -221,44 +227,50 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11270}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11302}
+      Script: {instanceID: 11300}
     - Class: 114
-      Script: {instanceID: 11380}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 11412}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11592}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11958}
+    - Class: 114
+      Script: {instanceID: 12252}
     - Class: 114
       Script: {instanceID: 12254}
-    - Class: 114
-      Script: {instanceID: 12256}
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
       Script: {instanceID: 13028}
+    - Class: 114
+      Script: {instanceID: 13066}
     - Class: 114
       Script: {instanceID: 13128}
     - Class: 115
@@ -301,7 +313,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11390}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -334,11 +346,11 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 12038}
+      Script: {instanceID: 12036}
     - Class: 114
-      Script: {instanceID: 12164}
+      Script: {instanceID: 12162}
     - Class: 114
       Script: {instanceID: 13128}
     - Class: 115
@@ -436,7 +448,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: aff8b8f12f1fb0fb345004b26df5ba7a
+      Hash: db821320508ad6c32fdd66b18428d19f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSet
@@ -1077,4 +1089,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level.unity
   - Assets/Scenes/StartStory.unity
   - Assets/Scenes/Player Control Test.unity
-  playerPath: C:/Users/409-01/Desktop/PYD/Protect_Your_Dessert.exe
+  playerPath: C:/Users/409-01/Desktop/Protect_Your_Dessert/Protect_Your_Dessert.exe

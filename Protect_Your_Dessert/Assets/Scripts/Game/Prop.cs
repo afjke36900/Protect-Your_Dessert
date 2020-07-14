@@ -15,8 +15,8 @@ public class Prop : MonoBehaviour
         //for迴圈
         for (int i = 0; i < total; i++)
         {
-            //座標 = (隨機,1.5,隨機)
-            Vector3 pos = new Vector3(Random.Range(5,95), 1.2f, Random.Range(5, 95));
+            //座標 = (隨機,高度,隨機)
+            Vector3 pos = new Vector3(Random.Range(5,55), -8.2f, Random.Range(5, 55));
             //生成(物件,座標,角度)
             Instantiate(prop, pos, Quaternion.Euler(90, 0, 0));
         }

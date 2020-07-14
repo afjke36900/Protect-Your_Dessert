@@ -5,8 +5,6 @@ public class GameSet : MonoBehaviour
 {
     [Header("螢幕解析度")]
     public Dropdown ScreenSizeDropdown;
-    [Header("是否全螢幕")]
-    public Toggle toggle;
 
     void Start()
     {
@@ -20,7 +18,7 @@ public class GameSet : MonoBehaviour
         //{
                     if (ScreenSizeDropdown.value == 0)
                     {
-                        Screen.SetResolution(1920, 1080, false);
+                        Screen.SetResolution(1920, 1080, false);    
                     }
 
                     if (ScreenSizeDropdown.value == 1)
@@ -30,12 +28,12 @@ public class GameSet : MonoBehaviour
 
                     if (ScreenSizeDropdown.value == 2)
                     {
-                        Screen.SetResolution(960, 540, false);
+                        Screen.SetResolution(960, 540, false);    
                     }
 
                     if (ScreenSizeDropdown.value == 3)
                     {
-                        Screen.SetResolution(1920, 1080, true);
+                        Screen.SetResolution(1920, 1080, true);     
         }
         //}
         //else
