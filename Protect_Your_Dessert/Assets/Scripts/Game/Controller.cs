@@ -10,6 +10,8 @@ public class Controller : MonoBehaviour
 
     public bool Canmove;
 
+    public Animator ani;
+
     public Shooting bullet;
 
     private void Move()
@@ -27,6 +29,14 @@ public class Controller : MonoBehaviour
 
         transform.eulerAngles = direction;
 
+        ani.SetBool("Run", Mathf.Abs(v) > 0 || Mathf.Abs(h) > 0);
+        //ani.SetBool("Run", Mathf.Abs(v) > 0);
+
+    }
+
+    private void Start()
+    {
+        ani = GetComponent<Animator>();        
     }
 
     void Update()

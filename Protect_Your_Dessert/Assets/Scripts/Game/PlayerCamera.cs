@@ -32,7 +32,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("PlayerTest").transform;
+        player = GameObject.Find("Player").transform;
     }
 
     private void LateUpdate()
