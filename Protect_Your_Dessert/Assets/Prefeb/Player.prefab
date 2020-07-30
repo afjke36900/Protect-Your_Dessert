@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664075116655966441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.361, z: 0.432}
+  m_LocalPosition: {x: 0, y: 0.463, z: 0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5939490682327606161}
@@ -900,7 +900,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.17
-  m_Height: 1.05
+  m_Height: 0.9
   m_Direction: 1
   m_Center: {x: 0, y: 0.48, z: 0}
 --- !u!95 &1664075116281145041
@@ -912,7 +912,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7220983887738425730}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: d869474281a85134db8839fbb3ece145, type: 3}
   m_Controller: {fileID: 9100000, guid: f3a1546fff0633a4a8eaf8fc03bcf2e2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -954,6 +954,7 @@ MonoBehaviour:
   BULLET: {fileID: 3372659919179607128, guid: 15f92c28b1e801a41a75a70b879fdcf1, type: 3}
   BulletForce: 20
   CountBullet: 100
+  ani: {fileID: 1664075116281145041}
 --- !u!1 &7279771661692644571
 GameObject:
   m_ObjectHideFlags: 0

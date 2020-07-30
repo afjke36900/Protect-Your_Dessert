@@ -72456,22 +72456,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1664075116281145041, guid: d0310de531a5874418b81b9b02bf76eb,
-        type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: d869474281a85134db8839fbb3ece145, type: 3}
-    - target: {fileID: 1664075116281145041, guid: d0310de531a5874418b81b9b02bf76eb,
-        type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
-        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform 'mixamorig:RightFoot'\n\tTransform
-        'mixamorig:Head'\n\tTransform 'mixamorig:LeftUpLeg'\n\tand more ...\n\tFrom
-        animation clip 'Idle'\n\tFrom animation clip 'Run'"
-      objectReference: {fileID: 0}
     - target: {fileID: 5939490682327606161, guid: d0310de531a5874418b81b9b02bf76eb,
         type: 3}
       propertyPath: m_LocalPosition.x

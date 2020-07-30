@@ -13,11 +13,19 @@ public class Shooting : MonoBehaviour
     [Header("子彈數量")]
     public int CountBullet = 100;
 
+    public Animator ani;
+
+    private void Start()
+    {
+        ani.GetComponent<Animator>();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButton(0) && CountBullet >0 ) 
         {
             Shoot();
+            ani.SetTrigger("Shoot");
         }
     }
 
