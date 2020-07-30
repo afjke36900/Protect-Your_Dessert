@@ -6,7 +6,7 @@ public class Controller : MonoBehaviour
 {
     private Vector3 direction;
     [Header("移動速度"), Range(0,5)]
-    public float speed = 0.2f;
+    public float speed = 0.1f;
 
     public bool Canmove;
 
@@ -63,7 +63,7 @@ public class Controller : MonoBehaviour
         if (prop.tag == "SpeedProp")
         {
             CancelInvoke("speeddown");
-            speed = 0.4f;
+            speed = 0.15f;
             Destroy(prop);
             Invoke("speeddown", 3.5f);
         }
@@ -78,7 +78,7 @@ public class Controller : MonoBehaviour
 
     private void speeddown()
     {
-        speed = 0.2f;
+        speed = 0.1f;
     }
 
 

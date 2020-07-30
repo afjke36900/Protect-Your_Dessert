@@ -7,6 +7,7 @@ public class StartVideo : MonoBehaviour
 {
     public VideoPlayer Movie_;
     public GameObject backgrond;
+    public Text Skipfilm;
     float Timer;
     void Start()
     {
@@ -19,11 +20,20 @@ public class StartVideo : MonoBehaviour
     {
         if (Movie_.isPlaying == false)
         {
-            SceneManager.LoadScene("Player Control Test");
+            SceneManager.LoadScene("Teach");
         }
     }
     void DestroyBackground()
     {
         Destroy(backgrond);
     }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene("Teach");
+        }
+    }
+
 }

@@ -11,6 +11,7 @@ TagManager:
   - PropTest
   - Monster
   - BGM1
+  - Floor
   layers:
   - Default
   - TransparentFX
