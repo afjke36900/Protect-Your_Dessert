@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7336191555719411454}
   - component: {fileID: 2460225214088953176}
   - component: {fileID: -7044357884525930271}
+  - component: {fileID: 3589849921906769171}
   m_Layer: 0
   m_Name: MonsterTest
   m_TagString: Monster
@@ -124,15 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3869dedb9403c46844aa71c8c2c13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 50
-  wanderRadius: 50
-  walkSpeed: 15
-  turnSpeed: 0.2
-  actionWeight:
-  - 3000
-  - 3000
-  - 4000
-  actRestTme: 2
+  hp: 60
+  speed: 1.5
+  radius: 10
 --- !u!95 &-7044357884525930271
 Animator:
   serializedVersion: 3
@@ -152,3 +147,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &3589849921906769171
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336191555719411455}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.56
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

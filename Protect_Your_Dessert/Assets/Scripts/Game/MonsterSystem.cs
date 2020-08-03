@@ -13,9 +13,9 @@ public class MonsterSystem : MonoBehaviour
         for (int i = 0; i < total; i++)
         {
             //座標 = (隨機,1.5,隨機)
-            Vector3 pos = new Vector3(Random.Range(5, 55), 0.5f, Random.Range(5, 55));
+            Vector3 pos = new Vector3(Random.Range(5, 55), 0.5f, Random.Range(5, 45));
             //生成(物件,座標,角度)
-            Instantiate(monster, pos, Quaternion.Euler(90, 0, 0));
+            Instantiate(monster, pos, Quaternion.Euler(0, 0, 0));
         }
 
         return total;
