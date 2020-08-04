@@ -72,6 +72,7 @@ public class GameSystem : MonoBehaviour
     public void ChooseLevel()
     {
         SceneManager.LoadScene("Level");
+        LevelSelection.NowLevel++;
     }
 
     private void Update()

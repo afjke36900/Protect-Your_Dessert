@@ -6,24 +6,30 @@ public class MonsterSystem : MonoBehaviour
     [Header("怪物")]
     public GameObject[] monsters;
 
-    private int CreateProp(GameObject monster, int count)
+    private int CreateMonster(GameObject monster, int count)
     {
         int total = count;
         //for迴圈
         for (int i = 0; i < total; i++)
         {
-            //座標 = (隨機,1.5,隨機)
-            Vector3 pos = new Vector3(Random.Range(5, 55), 0.5f, Random.Range(5, 45));
-            //生成(物件,座標,角度)
-            Instantiate(monster, pos, Quaternion.Euler(0, 0, 0));
+            Vector2 _Creatmons_pos = new Vector2(0, 0);
+            _Creatmons_pos += Random.Range(2, 9) * Rotate2D(Random.Range(0, 360));
+            Instantiate(monster, new Vector3(_Creatmons_pos.x, 6.75f, _Creatmons_pos.y), Quaternion.Euler(0, 0, 0));
         }
-
         return total;
     }
 
+    public Vector2 Rotate2D(float a)
+    {
+        a *= Mathf.Deg2Rad;
+        return new Vector2(Mathf.Cos(a), Mathf.Sin(a));
+    }
+
+
+
     private void Start()
     {
-        CreateProp(monsters[0], 8);
+        CreateMonster(monsters[0], 8);
     }
 
 }

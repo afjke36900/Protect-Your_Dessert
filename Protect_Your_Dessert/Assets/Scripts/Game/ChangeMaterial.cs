@@ -16,13 +16,18 @@ public class ChangeMaterial : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Bullet")
+        {
+            rend.sharedMaterial = material[1];
+        }
+        else if (col.gameObject.tag == "Monster")
         {
             rend.sharedMaterial = material[2];
         }
         else
         {
-            rend.sharedMaterial = material[1];
+           // rend.sharedMaterial = material[1];
         }
+
     }
 }
