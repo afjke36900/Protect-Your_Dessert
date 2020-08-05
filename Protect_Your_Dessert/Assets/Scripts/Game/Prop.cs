@@ -54,8 +54,8 @@ public class Prop : MonoBehaviour
 
     private void Start()
     {
-        RandomCreate(props[0], 40);
-        RandomCreate(props[1], 30);
+        RandomCreate(props[0], 10);
+        RandomCreate(props[1], 20);
     }
 
 
