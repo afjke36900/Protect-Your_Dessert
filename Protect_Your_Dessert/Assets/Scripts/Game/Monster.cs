@@ -5,8 +5,7 @@ public class Monster : MonoBehaviour
 {
     [Header("怪物血量"), Range(0,100)]
     public float hp;
-    [Header("怪物速度"), Range(0,20)]
-    public float speed=1.5f;
+    private float speed=0.1f;
 
     protected NavMeshAgent agent;
     protected Animator ani;
@@ -14,6 +13,10 @@ public class Monster : MonoBehaviour
     [Header("半徑"),Range(1,30)]
     public float radius = 10;
     private Vector3 final;
+    /// <summary>
+    /// 怪物轉向
+    /// </summary>
+    private Quaternion targetRotation;
 
     private void Awake()
     {
@@ -39,8 +42,10 @@ public class Monster : MonoBehaviour
         NavMesh.SamplePosition(RandomPos, out hit, radius, 1);
         //最終座標 = 碰撞點.座標
         final = hit.position;
+        transform.rotation = Quaternion.Slerp(transform.localRotation, targetRotation, 0.8f);
         }
         agent.SetDestination(final);
+
     }
 
     private void OnCollisionEnter(Collision collision)

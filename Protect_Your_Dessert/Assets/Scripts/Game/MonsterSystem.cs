@@ -14,7 +14,7 @@ public class MonsterSystem : MonoBehaviour
         {
             Vector2 _Creatmons_pos = new Vector2(0, 0);
             _Creatmons_pos += Random.Range(2, 9) * Rotate2D(Random.Range(0, 360));
-            Instantiate(monster, new Vector3(_Creatmons_pos.x, 6.75f, _Creatmons_pos.y), Quaternion.Euler(0, 0, 0));
+            Instantiate(monster, new Vector3(_Creatmons_pos.x, 7.5f, _Creatmons_pos.y), Quaternion.Euler(0, 0, 0));
         }
         return total;
     }

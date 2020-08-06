@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using System.Collections.Generic;
 
 public class GameSystem : MonoBehaviour
 {
@@ -8,15 +10,28 @@ public class GameSystem : MonoBehaviour
     #region 遊戲時間與倒數
     [Header("倒數時間")]
     public Text textTime; //畫面上呈現的倒數時間
-    private float gameTime = 30; //遊戲秒數
+    private float gameTime = 10; //遊戲秒數
+    #endregion
+    #region 計算材質數量
+    [Header("牆壁材質")]
+    public GameObject[] wall_material;
+
+    public List<Material> WallM = new List<Material>();
+
     #endregion
 
     #region 結束畫面
-    [Header("結束畫面標題")]
-    public Text textTitle;
     [Header("結束畫面")]
     public CanvasGroup final;
+    public static bool winorlose;
     #endregion
+
+    public static int currentScene;
+
+    private void Awake()
+    {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+    }
 
     private void CountTime()  //倒數時間方法
     {
@@ -35,14 +50,41 @@ public class GameSystem : MonoBehaviour
     {
         if (gameTime == 0)
         {
+            for (int i = 0; i < wall_material.Length; i++)
+        {
+            WallM.Add(wall_material[i].GetComponent<MeshRenderer>().material);
+        }
+        var not_cover = WallM.Where(x => x.color == new Color32(255, 255, 255, 0));
+        int a = not_cover.ToList().Count;
+            WallM.Clear();
+            if (a< 10)
+            { 
             //顯示結束畫面，啟動互動、啟動遮擋 (初始alpha設定=0)
             final.alpha = 1;
             final.interactable = true;
             final.blocksRaycasts = true;
-            textTitle.text = "Game Over";
             FindObjectOfType<Controller>().enabled = false;
             FindObjectOfType<Shooting>().enabled = false;
+                winorlose = false;
+            Invoke("EndScene", 3f);
+            }
+        else if (a>10)
+        {
+            //顯示結束畫面，啟動互動、啟動遮擋 (初始alpha設定=0)
+            final.alpha = 1;
+            final.interactable = true;
+            final.blocksRaycasts = true;
+            FindObjectOfType<Controller>().enabled = false;
+            FindObjectOfType<Shooting>().enabled = false;
+                winorlose = true;
+            Invoke("EndScene", 3f);
         }
+        }
+    }
+
+    private void EndScene()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
     public void PauseGame()
