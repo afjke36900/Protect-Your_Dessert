@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class Controller : MonoBehaviour
 {
     private Vector3 direction;
-    [Header("移動速度"), Range(0,5)]
-    public float speed = 0.1f;
+    [SerializeField]
+    private float speed = 0.07f;
 
     public bool Canmove;
 
@@ -63,14 +63,14 @@ public class Controller : MonoBehaviour
         if (prop.tag == "SpeedProp")
         {
             CancelInvoke("speeddown");
-            speed = 0.15f;
+            speed = 0.1f;
             Destroy(prop);
             Invoke("speeddown", 3.5f);
         }
         else if (prop.tag == "BulletProp")
         {
             Destroy(prop);
-            bullet.CountBullet += 30;
+            bullet.CountBullet += 50;
         }
 
     }
@@ -78,7 +78,7 @@ public class Controller : MonoBehaviour
 
     private void speeddown()
     {
-        speed = 0.1f;
+        speed = 0.07f;
     }
 
 

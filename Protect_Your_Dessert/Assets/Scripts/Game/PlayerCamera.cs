@@ -16,10 +16,10 @@ public class PlayerCamera : MonoBehaviour
     /// </summary>
     private void Track()
     {
-        //攝影機與玩家y軸距離 7
+        //攝影機與玩家y軸距離 8
         //攝影機與玩家z軸距離 -4
         Vector3 posTrack = player.position;
-        posTrack.y += 11f;
+        posTrack.y += 8f;
         posTrack.z += -4f;
 
         //攝影機座標 = 變形.座標

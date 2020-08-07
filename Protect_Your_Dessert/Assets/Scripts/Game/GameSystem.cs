@@ -40,7 +40,7 @@ public class GameSystem : MonoBehaviour
         //遊戲時間 = 數學.夾住(遊戲時間,最小值,最大值) <--不知道幹嘛用的
         gameTime = Mathf.Clamp(gameTime, 0, 100);
 
-        textTime.text = "倒數時間:" + gameTime.ToString("f0");
+        textTime.text =gameTime.ToString("f0");
 
         GameOver();
 
@@ -104,10 +104,10 @@ public class GameSystem : MonoBehaviour
     }
 
     // 返回首頁
-    public void Menu()
+    public void Level()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Level");
         FindObjectOfType<GameManager>().enabled = false;
     }
 

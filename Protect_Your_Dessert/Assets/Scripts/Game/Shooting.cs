@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     [Header("子彈速度")]
     public float BulletForce = 10f;
     [Header("子彈數量")]
-    public int CountBullet = 200;
+    public int CountBullet = 300;
 
     public Animator ani;
 
