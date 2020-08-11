@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 395358924}
   - component: {fileID: 395358923}
   m_Layer: 0
-  m_Name: TeamName
+  m_Name: Victory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,7 +350,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395358922}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 55189eefc2657c64eabae3d81688a58a, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: c071fdc13e3c7594c9d2216bebd96532, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1321782390}
