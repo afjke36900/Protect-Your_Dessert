@@ -14,6 +14,7 @@ public class Shooting : MonoBehaviour
     public int CountBullet = 300;
 
     public Animator ani;
+    public AudioSource aud;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
             ani.SetTrigger("Shoot");
+            aud.Play();
         }
     }
 

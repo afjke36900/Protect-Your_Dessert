@@ -10,7 +10,7 @@ public class GameSystem : MonoBehaviour
     #region 遊戲時間與倒數
     [Header("倒數時間")]
     public Text textTime; //畫面上呈現的倒數時間
-    private float gameTime = 10; //遊戲秒數
+    private float gameTime = 20; //遊戲秒數
     #endregion
     #region 計算材質數量
     [Header("牆壁材質")]
