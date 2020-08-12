@@ -11,7 +11,7 @@ public class TitleName : MonoBehaviour
     void Start()
     {
         InvokeRepeating("CheckMovie", 3f, 0.1f);
-        Invoke("DestroyBackground", 0.7f);
+        Invoke("DestroyBackground", 1f);
     }
 
 

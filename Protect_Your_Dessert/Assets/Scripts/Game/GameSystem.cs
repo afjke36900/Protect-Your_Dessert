@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.PlayerLoop;
 
 public class GameSystem : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class GameSystem : MonoBehaviour
     public GameObject[] wall_material;
 
     public List<Material> WallM = new List<Material>();
-
     #endregion
 
     #region 結束畫面
@@ -66,6 +66,7 @@ public class GameSystem : MonoBehaviour
             FindObjectOfType<Controller>().enabled = false;
             FindObjectOfType<Shooting>().enabled = false;
                 winorlose = false;
+                print(winorlose);
             Invoke("EndScene", 3f);
             }
         else if (a>10)
@@ -77,6 +78,7 @@ public class GameSystem : MonoBehaviour
             FindObjectOfType<Controller>().enabled = false;
             FindObjectOfType<Shooting>().enabled = false;
                 winorlose = true;
+                print(winorlose);
             Invoke("EndScene", 3f);
         }
         }
